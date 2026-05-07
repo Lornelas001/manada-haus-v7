@@ -184,7 +184,7 @@ export default function Index() {
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                En MANADA HAUS- creemos que el estilo no termina en ti. Se extiende a ese amigo que camina a tu lado 🐾
+                En MANADA HAUS creemos que el estilo no termina en ti. Se extiende a ese amigo que camina a tu lado 🐾
                 <br />
                 Accesorios para perros, gatos y cualquier mascota que esté en tu corazón ❤️
               </p>
