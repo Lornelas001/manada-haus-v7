@@ -142,7 +142,7 @@ const defaultProducts: Product[] = [
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
-  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial2.jpg'
+  'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
 ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
