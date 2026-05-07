@@ -135,6 +135,18 @@ const defaultProducts: Product[] = [
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
 
+            {
+    id: '11', name: 'Tarjeta Album del Mundial',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
+  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial2.jpg'
+],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
 ];
 
 function readProductsExtra(): Product[] {
