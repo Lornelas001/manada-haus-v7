@@ -118,7 +118,7 @@ const defaultProducts: Product[] = [
   },
 
           {
-    id: '9', name: 'Bata con capucha | Ropa de baño para mascotas',
+    id: '9', name: 'Bata de Baño Huellita | Ropa de baño para mascotas',
     description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
     price: 339, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
@@ -127,9 +127,9 @@ const defaultProducts: Product[] = [
   },
 
           {
-    id: '10', name: 'Bata con capucha | Ropa de baño para mascotas',
+    id: '10', name: 'Bata de Baño Gatitos | Ropa de baño para mascotas',
     description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
-    price: 339, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/Y4bTgjJS/Batarosa.jpg'],
     inStock: true, featured: true, isPromo: false, ratings: [],
