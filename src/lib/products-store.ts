@@ -213,7 +213,7 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     price: 298, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'7',qty:1},{size:'8',qty:100},{size:'9',qty:100},{size:'10',qty:5}],  
     images: [
-      'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
+      'https://i.ibb.co/YTNpCqYJ/689470887-122109402141213436-186160851414355131-n.jpg',
       ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
