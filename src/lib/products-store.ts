@@ -98,7 +98,7 @@ const defaultProducts: Product[] = [
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 269, category: 'Vive el mundial con el TRI', sizes: ['0','1','2','3','4','5','6'],
+    price: 269, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
       'https://i.ibb.co/fYwjQZq2/Whats-App-Image-2026-05-09-at-1-22-11-AM.jpg',
@@ -114,7 +114,7 @@ const defaultProducts: Product[] = [
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 339, category: 'Vive el mundial con el TRI', sizes: ['7','8','9','10'],
+    price: 339, category: 'Mexico', sizes: ['7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/hFFGqddv/Gemini-Generated-Image-9huchd9huchd9huc-1.png'],
     inStock: true, featured: true, isPromo: false, ratings: [],
@@ -141,7 +141,7 @@ const defaultProducts: Product[] = [
             {
     id: '11', name: 'Tarjeta Album del Mundial',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'Vive el mundial con el TRI', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 89, category: 'Mexico', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
@@ -196,7 +196,7 @@ Disponible en color negro 🐶🐱`,
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 249, category: 'Vive el mundial con el TRI', sizes: ['0','1','2','3','4','5','6'],
+    price: 249, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
       'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
