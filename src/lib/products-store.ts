@@ -153,7 +153,7 @@ const defaultProducts: Product[] = [
               {
     id: '12', name: 'Plato Plegable',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 110, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
@@ -164,7 +164,7 @@ const defaultProducts: Product[] = [
               {
     id: '13', name: 'Transportadora Avión',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 550, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
@@ -173,12 +173,18 @@ const defaultProducts: Product[] = [
   },
 
                 {
-    id: '14', name: 'Cama / Casa',
-    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    id: '14', name: 'Cama / Casa 2 en 1',
+    description: `🏡🐾 ¿Poco espacio y muchísimo amor para darle?
+Conoce nuestra casa-cama 2 en 1 para mascotas ✨
+🖤 Cómoda y acogedora
+🧼 Fácil de limpiar
+🚫 Tecnología antiolores
+💪 Resistente a mordeduras y rasguños
+Disponible en color negro 🐶🐱`,
+    price: 550, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
-  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
+  'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
 ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
@@ -190,13 +196,28 @@ const defaultProducts: Product[] = [
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 269, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    price: 249, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
       'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
       ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
+
+  
+      {
+    id: '16', name: 'Impermeable premium talla Grande',
+    description: `Estilo y comodidad para días de lluvia o frío ✨
+
+Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Danés y más 🐾`,
+    price: 298, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'7',qty:1},{size:'8',qty:100},{size:'9',qty:100},{size:'10',qty:5}],  
+    images: [
+      'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
+      ],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
 
 ];
 
