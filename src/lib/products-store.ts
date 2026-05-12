@@ -27,7 +27,7 @@ const defaultProducts: Product[] = [
     price: 159, originalPrice: 229, category: 'ropa',
     sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2}],
-    images: ['https://i.ibb.co/WpVLj7F6/db06d15c-062d-4fc0-87d8-3c03fe3ab83e.jpg'],
+    images: ['https://i.ibb.co/Fb96Qf8w/Whats-App-Image-2026-05-11-at-11-26-52-PM.jpg'],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
   {
@@ -38,7 +38,7 @@ const defaultProducts: Product[] = [
     Disponible en varias tallas.`, 
     price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/cKCTdNbS/Gemini-Generated-Image-c4ex6ac4ex6ac4ex.png'],
+    images: ['https://i.ibb.co/d4ZV0SWj/Whats-App-Image-2026-05-11-at-11-34-05-PM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
         {
@@ -50,7 +50,7 @@ const defaultProducts: Product[] = [
     Perfecto para perritas pequeñas y medianas.`,
     price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/vvxTwWtV/Whats-App-Image-2026-04-11-at-11-31-41-PM.jpg'],
+    images: ['https://i.ibb.co/ccMsXrYL/Whats-App-Image-2026-05-12-at-12-18-30-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
   {
@@ -62,7 +62,7 @@ const defaultProducts: Product[] = [
     Perfecto para perritas pequeñas y medianas.`,
     price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/gbZJRDL6/1084ae3a-979c-42f8-a43b-5ae0aa1f557d.jpg'],
+    images: ['https://i.ibb.co/8nh6pQsB/Whats-App-Image-2026-05-12-at-12-03-08-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
     {
@@ -74,7 +74,7 @@ const defaultProducts: Product[] = [
     Perfecto para perritas pequeñas y medianas.`,
     price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/B2fPL5Q3/2ad89d6b-dd40-4fd3-ad5b-2ae74d5e8d6e.jpg'],
+    images: ['https://i.ibb.co/XkW6TkZ3/Whats-App-Image-2026-05-12-at-12-18-15-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
