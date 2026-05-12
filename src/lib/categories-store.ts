@@ -1,6 +1,6 @@
 import { ProductCategoryItem } from './types';
 
-const STORAGE_KEY = 'mascota-directa-categories';
+const STORAGE_KEY = 'mascota-directa-categories1';
 
 const defaultCategories: ProductCategoryItem[] = [
   { id: 'Mexico', label: 'Vive el mundial con el TRI', emoji: '⚽🇲🇽' },
