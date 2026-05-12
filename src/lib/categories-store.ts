@@ -3,9 +3,12 @@ import { ProductCategoryItem } from './types';
 const STORAGE_KEY = 'mascota-directa-categories';
 
 const defaultCategories: ProductCategoryItem[] = [
+  { id: 'Mexico',  label: 'Vive el mundial con el tri',  emoji: '&#x1f1f2;&#x1f1e6;' },
   { id: 'perro', label: 'Perro', emoji: '🐕' },
   { id: 'gato',  label: 'Gato',  emoji: '🐈' },
   { id: 'ropa',  label: 'Ropa',  emoji: '👕' },
+  { id: 'ropa',  label: 'Ropa',  emoji: '👕' },
+
 ];
 
 export function getCategories(): ProductCategoryItem[] {
