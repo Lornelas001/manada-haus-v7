@@ -28,7 +28,7 @@ const defaultProducts: Product[] = [
     sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2}],
     images: ['https://i.ibb.co/Fb96Qf8w/Whats-App-Image-2026-05-11-at-11-26-52-PM.jpg'],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
   {
     id: '2', name: 'Jersey para perro estilo americano – Hello Kitty',
@@ -117,7 +117,7 @@ const defaultProducts: Product[] = [
     price: 339, category: 'Mexico', sizes: ['7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/hFFGqddv/Gemini-Generated-Image-9huchd9huchd9huc-1.png'],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
           {
@@ -126,7 +126,7 @@ const defaultProducts: Product[] = [
     price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/jZxY0nCb/Bataroja.jpg'],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
           {
@@ -135,7 +135,7 @@ const defaultProducts: Product[] = [
     price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/Y4bTgjJS/Batarosa.jpg'],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
             {
@@ -158,7 +158,7 @@ const defaultProducts: Product[] = [
     images: [
   'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
 ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
               {
@@ -169,7 +169,7 @@ const defaultProducts: Product[] = [
     images: [
   'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
 ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
                 {
@@ -186,7 +186,7 @@ Disponible en color negro 🐶🐱`,
     images: [
   'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
 ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: true, isPromo: true, ratings: [],
   },
 
       {
@@ -201,7 +201,7 @@ Disponible en color negro 🐶🐱`,
     images: [
       'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
       ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
   
@@ -215,7 +215,7 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     images: [
       'https://i.ibb.co/YTNpCqYJ/689470887-122109402141213436-186160851414355131-n.jpg',
       ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
+    inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
 
