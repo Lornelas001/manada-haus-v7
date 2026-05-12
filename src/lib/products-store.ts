@@ -153,7 +153,7 @@ const defaultProducts: Product[] = [
               {
     id: '12', name: 'Plato Plegable',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 110, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 110, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
@@ -164,7 +164,7 @@ const defaultProducts: Product[] = [
               {
     id: '13', name: 'Transportadora Avión',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 550, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
@@ -181,7 +181,7 @@ Conoce nuestra casa-cama 2 en 1 para mascotas ✨
 🚫 Tecnología antiolores
 💪 Resistente a mordeduras y rasguños
 Disponible en color negro 🐶🐱`,
-    price: 550, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: [
   'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
