@@ -100,7 +100,10 @@ const defaultProducts: Product[] = [
     ✔ Disponible en varias tallas`,
     price: 269, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/k20r9s4x/Gemini-Generated-Image-ehfr1jehfr1jehfr-1.png'],
+    images: [
+      'https://i.ibb.co/fYwjQZq2/Whats-App-Image-2026-05-09-at-1-22-11-AM.jpg',
+      'https://i.ibb.co/k20r9s4x/Gemini-Generated-Image-ehfr1jehfr1jehfr-1.png'
+    ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
 
@@ -144,6 +147,54 @@ const defaultProducts: Product[] = [
   'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
   'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
 ],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+              {
+    id: '12', name: 'Plato Plegable',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
+],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+              {
+    id: '13', name: 'Transportadora Avión',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
+],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+                {
+    id: '14', name: 'Cama / Casa',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 89, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
+],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+      {
+    id: '15', name: 'Jersey Selección Blanco México para Perro Mundial Talla 0 - 6',
+    description: `Apoya a la selección junto con tu mejor amigo 
+    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
+    ✔ Tela cómoda y ligera
+    ✔ Ideal para paseos o ver los partidos
+    ✔ Disponible en varias tallas`,
+    price: 269, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+      'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
+      ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
 
