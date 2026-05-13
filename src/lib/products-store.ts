@@ -4,6 +4,133 @@ const PROD_KEY  = 'mh-products-extra-v1';
 const SALES_KEY = 'mh-sales-v7';
 
 const defaultProducts: Product[] = [
+    {
+    id: '7', name: 'Jersey Selección México para Perro Mundial Talla 0 - 6',
+    description: `Apoya a la selección junto con tu mejor amigo 
+    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
+    ✔ Tela cómoda y ligera
+    ✔ Ideal para paseos o ver los partidos
+    ✔ Disponible en varias tallas`,
+    price: 269, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+      'https://i.ibb.co/fYwjQZq2/Whats-App-Image-2026-05-09-at-1-22-11-AM.jpg',
+      'https://i.ibb.co/k20r9s4x/Gemini-Generated-Image-ehfr1jehfr1jehfr-1.png'
+    ],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '8', name: 'Jersey Selección México para Perro Mundial Talla 7 - 10',
+    description: `Apoya a la selección junto con tu mejor amigo 
+    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
+    ✔ Tela cómoda y ligera
+    ✔ Ideal para paseos o ver los partidos
+    ✔ Disponible en varias tallas`,
+    price: 339, category: 'Mexico', sizes: ['7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: ['https://i.ibb.co/hFFGqddv/Gemini-Generated-Image-9huchd9huchd9huc-1.png'],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '9', name: 'Bata de Baño Huellita | Ropa de baño para mascotas',
+    description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
+    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: ['https://i.ibb.co/jZxY0nCb/Bataroja.jpg'],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '10', name: 'Bata de Baño Gatitos | Ropa de baño para mascotas',
+    description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
+    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: ['https://i.ibb.co/Y4bTgjJS/Batarosa.jpg'],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '11', name: 'Tarjeta Album del Mundial',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 89, category: 'Mexico', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
+  'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
+],
+    inStock: true, featured: true, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '12', name: 'Plato Plegable',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 110, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
+],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '13', name: 'Transportadora Avión',
+    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
+    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
+],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  {
+    id: '14', name: 'Cama / Casa 2 en 1',
+    description: `🏡🐾 ¿Poco espacio y muchísimo amor para darle?
+Conoce nuestra casa-cama 2 en 1 para mascotas ✨
+🖤 Cómoda y acogedora
+🧼 Fácil de limpiar
+🚫 Tecnología antiolores
+💪 Resistente a mordeduras y rasguños
+Disponible en color negro 🐶🐱`,
+    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+  'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
+],
+    inStock: true, featured: true, isPromo: true, ratings: [],
+  },
+
+  {
+    id: '15', name: 'Jersey Selección Blanco México para Perro Mundial Talla 0 - 6',
+    description: `Apoya a la selección junto con tu mejor amigo 
+    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
+    ✔ Tela cómoda y ligera
+    ✔ Ideal para paseos o ver los partidos
+    ✔ Disponible en varias tallas`,
+    price: 249, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    images: [
+      'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
+      ],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
+  
+  {
+    id: '16', name: 'Impermeable premium talla Grande',
+    description: `Estilo y comodidad para días de lluvia o frío ✨
+
+Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Danés y más 🐾`,
+    price: 298, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
+    stock: [{size:'7',qty:1},{size:'8',qty:100},{size:'9',qty:100},{size:'10',qty:5}],  
+    images: [
+      'https://i.ibb.co/YTNpCqYJ/689470887-122109402141213436-186160851414355131-n.jpg',
+      ],
+    inStock: true, featured: false, isPromo: false, ratings: [],
+  },
+
   {
     id: '0', name: 'Jersey para perro estilo americano – Chiefs Edition',
     description: `Jersey inspirado en los colores de los Kansas City Chiefs.
@@ -41,7 +168,7 @@ const defaultProducts: Product[] = [
     images: ['https://i.ibb.co/d4ZV0SWj/Whats-App-Image-2026-05-11-at-11-34-05-PM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
-        {
+  {
     id: '3', name: 'Vestido "What Fills" Primavera',
     description: `Vestido para perro en color rosa con diseño exclusivo
     Bordado de alta calidad con frase “Be YOUtiful”
@@ -65,7 +192,7 @@ const defaultProducts: Product[] = [
     images: ['https://i.ibb.co/8nh6pQsB/Whats-App-Image-2026-05-12-at-12-03-08-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
-    {
+  {
     id: '5', name: 'Vestido "Today will be great" Primavera',
     description: `Vestido para perro en color rosa con diseño exclusivo
     Bordado de alta calidad con frase “Be YOUtiful”
@@ -88,133 +215,6 @@ const defaultProducts: Product[] = [
     price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
     stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
     images: ['https://i.ibb.co/tTd8TxL9/41c9e1b7-d477-4a89-a057-884727eb53f4.jpg'],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-      {
-    id: '7', name: 'Jersey Selección México para Perro Mundial Talla 0 - 6',
-    description: `Apoya a la selección junto con tu mejor amigo 
-    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
-    ✔ Tela cómoda y ligera
-    ✔ Ideal para paseos o ver los partidos
-    ✔ Disponible en varias tallas`,
-    price: 269, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-      'https://i.ibb.co/fYwjQZq2/Whats-App-Image-2026-05-09-at-1-22-11-AM.jpg',
-      'https://i.ibb.co/k20r9s4x/Gemini-Generated-Image-ehfr1jehfr1jehfr-1.png'
-    ],
-    inStock: true, featured: true, isPromo: false, ratings: [],
-  },
-
-        {
-    id: '8', name: 'Jersey Selección México para Perro Mundial Talla 7 - 10',
-    description: `Apoya a la selección junto con tu mejor amigo 
-    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
-    ✔ Tela cómoda y ligera
-    ✔ Ideal para paseos o ver los partidos
-    ✔ Disponible en varias tallas`,
-    price: 339, category: 'Mexico', sizes: ['7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/hFFGqddv/Gemini-Generated-Image-9huchd9huchd9huc-1.png'],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-          {
-    id: '9', name: 'Bata de Baño Huellita | Ropa de baño para mascotas',
-    description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
-    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/jZxY0nCb/Bataroja.jpg'],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-          {
-    id: '10', name: 'Bata de Baño Gatitos | Ropa de baño para mascotas',
-    description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
-    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: ['https://i.ibb.co/Y4bTgjJS/Batarosa.jpg'],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-            {
-    id: '11', name: 'Tarjeta Album del Mundial',
-    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'Mexico', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
-  'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
-],
-    inStock: true, featured: true, isPromo: false, ratings: [],
-  },
-
-              {
-    id: '12', name: 'Plato Plegable',
-    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 110, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-  'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
-],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-              {
-    id: '13', name: 'Transportadora Avión',
-    description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
-],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-                {
-    id: '14', name: 'Cama / Casa 2 en 1',
-    description: `🏡🐾 ¿Poco espacio y muchísimo amor para darle?
-Conoce nuestra casa-cama 2 en 1 para mascotas ✨
-🖤 Cómoda y acogedora
-🧼 Fácil de limpiar
-🚫 Tecnología antiolores
-💪 Resistente a mordeduras y rasguños
-Disponible en color negro 🐶🐱`,
-    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-  'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
-],
-    inStock: true, featured: true, isPromo: true, ratings: [],
-  },
-
-      {
-    id: '15', name: 'Jersey Selección Blanco México para Perro Mundial Talla 0 - 6',
-    description: `Apoya a la selección junto con tu mejor amigo 
-    Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
-    ✔ Tela cómoda y ligera
-    ✔ Ideal para paseos o ver los partidos
-    ✔ Disponible en varias tallas`,
-    price: 249, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
-    images: [
-      'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
-      ],
-    inStock: true, featured: false, isPromo: false, ratings: [],
-  },
-
-  
-      {
-    id: '16', name: 'Impermeable premium talla Grande',
-    description: `Estilo y comodidad para días de lluvia o frío ✨
-
-Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Danés y más 🐾`,
-    price: 298, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'7',qty:1},{size:'8',qty:100},{size:'9',qty:100},{size:'10',qty:5}],  
-    images: [
-      'https://i.ibb.co/YTNpCqYJ/689470887-122109402141213436-186160851414355131-n.jpg',
-      ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
