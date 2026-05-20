@@ -11,30 +11,30 @@ type PromotionItem = {
 };
 
 const DEFAULT_PROMOTIONS: PromotionItem[] = [
-  {
-    id: 'buen-fin',
-    title: 'Buen Fin',
-    description: 'Aprovecha descuentos especiales en productos seleccionados durante esta temporada.',
-    badge: 'Por tiempo limitado',
-    cta: 'Ver catálogo',
-    visible: true,
-  },
-  {
-    id: 'envio-gratis',
-    title: 'Envío gratis',
-    description: 'Recibe envío gratis en compras mínimas participantes.',
-    badge: 'Promo especial',
-    cta: 'Comprar ahora',
-    visible: true,
-  },
-  {
-    id: 'producto-oferta',
-    title: 'Producto en oferta',
-    description: 'Encuentra modelos seleccionados con precio especial por tiempo limitado.',
-    badge: 'Oferta',
-    cta: 'Ver productos',
-    visible: true,
-  },
+  // {
+  //   id: 'buen-fin',
+  //   title: 'Buen Fin',
+  //   description: 'Aprovecha descuentos especiales en productos seleccionados durante esta temporada.',
+  //   badge: 'Por tiempo limitado',
+  //   cta: 'Ver catálogo',
+  //   visible: true,
+  // },
+  // {
+  //   id: 'envio-gratis',
+  //   title: 'Envío gratis',
+  //   description: 'Recibe envío gratis en compras mínimas participantes.',
+  //   badge: 'Promo especial',
+  //   cta: 'Comprar ahora',
+  //   visible: true,
+  // },
+  // {
+  //   id: 'producto-oferta',
+  //   title: 'Producto en oferta',
+  //   description: 'Encuentra modelos seleccionados con precio especial por tiempo limitado.',
+  //   badge: 'Oferta',
+  //   cta: 'Ver productos',
+  //   visible: true,
+  // },
 ];
 
 const STORAGE_KEY = 'manada-promotions';

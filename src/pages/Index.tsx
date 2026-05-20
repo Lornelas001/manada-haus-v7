@@ -1,5 +1,6 @@
 import { useState, useMemo, useCallback } from 'react';
 import { ProductCard } from '@/components/ProductCard';
+import { PromoBanner } from '@/components/PromoBanner';
 import { ProductDetailSheet } from '@/components/ProductDetailSheet';
 import { AddProductDialog } from '@/components/AddProductDialog';
 import { ManageCategoriesDialog } from '@/components/ManageCategoriesDialog';
@@ -146,11 +147,12 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+      <PromoBanner />
       <header
         className="relative overflow-hidden border-b border-border"
         style={{ background: 'linear-gradient(180deg, #ffffff 0%, #faf8f5 100%)' }}
       >
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-8 pb-10 sm:pt-10 sm:pb-12">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-4 pb-6 sm:pt-6 sm:pb-8">
           <div className="absolute top-4 right-4 flex items-center gap-2 z-10">
             {isAdmin && (
               <button
