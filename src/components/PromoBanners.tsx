@@ -14,12 +14,12 @@ interface PromoBannerCard {
 
 const banners: PromoBannerCard[] = [
       {
-    id: 'hotsale',
-    title: '🔥 Guauuu Sale',
-    subtitle: '',
-    ctaText: '',
+    id: 'envios-50',
+    title: 'Envíos en $50',
+    subtitle: 'Hasta el 31 de mayo',
+    ctaText: 'Comprar ahora',
     ctaLink: '#catalogo',
-    imageUrl: 'https://i.ibb.co/r24srMcS/download-3.png',
+    imageUrl: 'https://i.ibb.co/Q78bzKYf/download-5.png',
     gradientFrom: 'from-black/70',
   },
   {
