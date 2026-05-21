@@ -13,6 +13,15 @@ interface PromoBannerCard {
 }
 
 const banners: PromoBannerCard[] = [
+      {
+    id: 'hotsale',
+    title: '🔥 Guauuu Sale',
+    subtitle: '',
+    ctaText: '',
+    ctaLink: '#catalogo',
+    imageUrl: 'https://i.ibb.co/r24srMcS/download-3.png',
+    gradientFrom: 'from-black/70',
+  },
   {
     id: 'final-pumas-cruz-azul',
     title: 'Final Pumas vs Cruz Azul',
@@ -31,6 +40,7 @@ const banners: PromoBannerCard[] = [
     imageUrl: 'https://i.ibb.co/B5xTQscy/download-2.png',
     gradientFrom: 'from-black/70',
   },
+
 ];
 
 export function PromoBanners() {
