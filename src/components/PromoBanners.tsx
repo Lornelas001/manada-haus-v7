@@ -14,6 +14,18 @@ interface PromoBannerCard {
 
 const banners: PromoBannerCard[] = [
       {
+    id: 'gana-mundial',
+    title: '',
+    subtitle: '',
+    ctaText: '',
+    ctaLink: '#catalogo',
+    imageUrl: 'https://i.ibb.co/sYF612h/Whats-App-Image-2026-06-10-at-12-55-51-AM.jpg',
+    gradientFrom: 'from-black/70',
+  },
+
+
+
+      {
     id: 'envios-50',
     title: 'Envíos en $50',
     subtitle: 'Hasta el 15 de junio',
