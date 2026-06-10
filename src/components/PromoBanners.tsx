@@ -16,30 +16,13 @@ const banners: PromoBannerCard[] = [
       {
     id: 'envios-50',
     title: 'Envíos en $50',
-    subtitle: 'Hasta el 31 de mayo',
+    subtitle: 'Hasta el 15 de junio',
     ctaText: 'Comprar ahora',
     ctaLink: '#catalogo',
     imageUrl: 'https://i.ibb.co/Q78bzKYf/download-5.png',
     gradientFrom: 'from-black/70',
   },
-  {
-    id: 'final-pumas-cruz-azul',
-    title: 'Final Pumas vs Cruz Azul',
-    subtitle: 'Playeritas y accesorios para alentar con tu lomito',
-    ctaText: 'Comprar ahora',
-    ctaLink: '#catalogo',
-    imageUrl: 'https://i.ibb.co/ZpDzjPSx/download-1.png',
-    gradientFrom: 'from-black/70',
-  },
-  {
-    id: 'hotsale',
-    title: '🔥 Guauuu Sale',
-    subtitle: 'Hasta 30% OFF en accesorios seleccionados',
-    ctaText: 'Ver ofertas',
-    ctaLink: '#catalogo',
-    imageUrl: 'https://i.ibb.co/B5xTQscy/download-2.png',
-    gradientFrom: 'from-black/70',
-  },
+
 
 ];
 

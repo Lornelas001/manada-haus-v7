@@ -1,18 +1,27 @@
 import { Product, SaleRecord } from './types';
 
-const PROD_KEY  = 'mh-products-extra-v1';
+const PROD_KEY = 'mh-products-extra-v1';
 const SALES_KEY = 'mh-sales-v7';
 
 const defaultProducts: Product[] = [
-    {
+
+  {
     id: '7', name: 'Jersey Selección México para Perro Mundial Talla 0 - 6',
     description: `Apoya a la selección junto con tu mejor amigo 
     Viste a tu mascota con el jersey de la selección mexicana para perro y celebren juntos el Mundial.
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 269, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 249, category: 'Mexico', sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [
+      { size: '0', qty: 2 },
+      { size: '1', qty: 2 },
+      { size: '2', qty: 2 },
+      { size: '3', qty: 2 },
+      { size: '4', qty: 2 },
+      { size: '5', qty: 2 },
+      { size: '6', qty: 2 }
+    ],
     images: [
       'https://i.ibb.co/fYwjQZq2/Whats-App-Image-2026-05-09-at-1-22-11-AM.jpg',
       'https://i.ibb.co/k20r9s4x/Gemini-Generated-Image-ehfr1jehfr1jehfr-1.png'
@@ -27,8 +36,8 @@ const defaultProducts: Product[] = [
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 339, category: 'Mexico', sizes: ['7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 339, category: 'Mexico', sizes: ['7', '8', '9', '10'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/hFFGqddv/Gemini-Generated-Image-9huchd9huchd9huc-1.png'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -36,8 +45,8 @@ const defaultProducts: Product[] = [
   {
     id: '9', name: 'Bata de Baño Huellita | Ropa de baño para mascotas',
     description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
-    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 229, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/jZxY0nCb/Bataroja.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -45,8 +54,8 @@ const defaultProducts: Product[] = [
   {
     id: '10', name: 'Bata de Baño Gatitos | Ropa de baño para mascotas',
     description: `Mantén a tu mascota calientita, cómoda y protegida del frío con nuestra toalla de baño con capucha, suave y de alta calidad`,
-    price: 229, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 229, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/Y4bTgjJS/Batarosa.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -54,34 +63,34 @@ const defaultProducts: Product[] = [
   {
     id: '11', name: 'Tarjeta Album del Mundial',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 89, category: 'Mexico', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 89, category: 'Mexico', sizes: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: [
-  'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
-  'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
-],
+      'https://i.ibb.co/Y4SKvT4H/Tarjeta-Mundial.jpg',
+      'https://i.ibb.co/qYhmB3HY/Tarjeta-Mundial2.jpg'
+    ],
     inStock: true, featured: true, isPromo: false, ratings: [],
   },
 
   {
     id: '12', name: 'Plato Plegable',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 110, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 110, category: 'hogar', sizes: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: [
-  'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
-],
+      'https://i.ibb.co/KpLk6cNH/Whats-App-Image-2026-05-11-at-9-56-21-PM.jpg',
+    ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
   {
     id: '13', name: 'Transportadora Avión',
     description: `Convierte a tu lomito en toda una estrella estilo álbum 2026 y llévatelo en una foto edición mundialista ✨`,
-    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 550, category: 'hogar', sizes: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: [
-  'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
-],
+      'https://i.ibb.co/Ng0HC5PD/Whats-App-Image-2026-05-11-at-9-56-22-PM.jpg'
+    ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
@@ -94,11 +103,11 @@ Conoce nuestra casa-cama 2 en 1 para mascotas ✨
 🚫 Tecnología antiolores
 💪 Resistente a mordeduras y rasguños
 Disponible en color negro 🐶🐱`,
-    price: 550, category: 'hogar', sizes: ['0','1','2','3','4','5','6','7','8','9','10'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 550, category: 'hogar', sizes: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: [
-  'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
-],
+      'https://i.ibb.co/vCjS5qhL/Whats-App-Image-2026-05-09-at-1-29-06-AM.jpg'
+    ],
     inStock: true, featured: true, isPromo: true, ratings: [],
   },
 
@@ -109,27 +118,29 @@ Disponible en color negro 🐶🐱`,
     ✔ Tela cómoda y ligera
     ✔ Ideal para paseos o ver los partidos
     ✔ Disponible en varias tallas`,
-    price: 249, category: 'Mexico', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 249, category: 'Mexico', sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: [
       'https://i.ibb.co/dwWdrMMq/Whats-App-Image-2026-05-09-at-1-26-22-AM.jpg',
-      ],
+    ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
-  
+
   {
     id: '16', name: 'Impermeable premium talla Grande',
     description: `Estilo y comodidad para días de lluvia o frío ✨
 
 Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Danés y más 🐾`,
-    price: 298, category: 'ropa', sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'7',qty:1},{size:'8',qty:100},{size:'9',qty:100},{size:'10',qty:5}],  
+    price: 298, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '7', qty: 1 }, { size: '8', qty: 100 }, { size: '9', qty: 100 }, { size: '10', qty: 5 }],
     images: [
       'https://i.ibb.co/YTNpCqYJ/689470887-122109402141213436-186160851414355131-n.jpg',
-      ],
+    ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
+
+
 
   {
     id: '0', name: 'Jersey para perro estilo americano – Chiefs Edition',
@@ -138,10 +149,10 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     Diseño deportivo con ajuste cómodo y seguro.
     Disponible en varias tallas.`,
     price: 159, originalPrice: 229, category: 'ropa',
-    sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:5},{size:'2',qty:5},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2}],
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 5 }, { size: '2', qty: 5 }, { size: '3', qty: 5 }, { size: '4', qty: 2 }, { size: '5', qty: 5 }, { size: '6', qty: 2 }],
     images: [
-      'https://i.ibb.co/0RN50BBV/ba878c20-2431-4d77-93d2-d5a33ebd7cab.jpg', 
+      'https://i.ibb.co/0RN50BBV/ba878c20-2431-4d77-93d2-d5a33ebd7cab.jpg',
     ],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -150,10 +161,10 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     description: `Jersey inspirado en los colores de los Raiders.
     Tela suave y ligera que permite libertad de movimiento.
     Diseño deportivo con ajuste cómodo y seguro.
-    Disponible en varias tallas.`,    
+    Disponible en varias tallas.`,
     price: 159, originalPrice: 229, category: 'ropa',
-    sizes: ['0','1','2','3','4','5','6'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2}],
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 100 }, { size: '2', qty: 100 }, { size: '3', qty: 5 }, { size: '4', qty: 2 }, { size: '5', qty: 5 }, { size: '6', qty: 2 }],
     images: ['https://i.ibb.co/Fb96Qf8w/Whats-App-Image-2026-05-11-at-11-26-52-PM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -162,9 +173,9 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     description: `Jersey inspirado en Hello Kitty.
     Tela suave y ligera que permite libertad de movimiento.
     Diseño deportivo con ajuste cómodo y seguro.
-    Disponible en varias tallas.`, 
-    price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    Disponible en varias tallas.`,
+    price: 159, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6', '7'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/d4ZV0SWj/Whats-App-Image-2026-05-11-at-11-34-05-PM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -175,8 +186,8 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     Tela suave, cómoda y ligera (ideal para uso diario)
     Corte ergonómico que permite libertad de movimiento
     Perfecto para perritas pequeñas y medianas.`,
-    price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 159, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6', '7'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/ccMsXrYL/Whats-App-Image-2026-05-12-at-12-18-30-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -187,8 +198,8 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     Tela suave, cómoda y ligera (ideal para uso diario)
     Corte ergonómico que permite libertad de movimiento
     Perfecto para perritas pequeñas y medianas.`,
-    price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 159, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6', '7'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/8nh6pQsB/Whats-App-Image-2026-05-12-at-12-03-08-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
@@ -199,26 +210,108 @@ Ideal para perros grandes como Labrador, Husky, Golden, San Bernardo, Gran Dané
     Tela suave, cómoda y ligera (ideal para uso diario)
     Corte ergonómico que permite libertad de movimiento
     Perfecto para perritas pequeñas y medianas.`,
-    price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    price: 159, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6', '7'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/XkW6TkZ3/Whats-App-Image-2026-05-12-at-12-18-15-AM.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
-    {
+  {
     id: '6', name: 'Vestido "Love" Primavera',
     description: `Vestido para perro en color rosa con diseño exclusivo
     Bordado de alta calidad con frase “Be YOUtiful”
     Tela suave, cómoda y ligera (ideal para uso diario)
     Corte ergonómico que permite libertad de movimiento
-    Perfecto para perritas pequeñas y medianas.`,    
-    price: 159, category: 'ropa', sizes: ['0','1','2','3','4','5','6','7'],
-    stock: [{size:'0',qty:1},{size:'1',qty:100},{size:'2',qty:100},{size:'3',qty:5},{size:'4',qty:2},{size:'5',qty:5},{size:'6',qty:2},{size:'7',qty:2}],  
+    Perfecto para perritas pequeñas y medianas.`,
+    price: 159, category: 'ropa', sizes: ['0', '1', '2', '3', '4', '5', '6', '7'],
+    stock: [{ size: '7', qty: 2 }, { size: '8', qty: 2 }, { size: '9', qty: 2 }, { size: '10', qty: 2 }],
     images: ['https://i.ibb.co/tTd8TxL9/41c9e1b7-d477-4a89-a057-884727eb53f4.jpg'],
     inStock: true, featured: false, isPromo: false, ratings: [],
   },
 
-
+  {
+    id: '17',
+    name: 'Mameluco Disney Boo',
+    description: `Un look tierno, cómodo y divertido para tu lomito. Inspirado en Boo de Monsters Inc.`,
+    price: 199,
+    category: 'ropa',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: ['https://i.ibb.co/jvRCPqP6/Whats-App-Image-2026-05-29-at-1-34-47-PM.jpg'],
+    inStock: true, featured: false, isPromo: false, ratings: []
+  },
+  {
+    id: '18',
+    name: 'Mameluco Disney Lotso',
+    description: `Mameluco rosa inspirado en Lotso de Toy Story.`,
+    price: 199, category: 'ropa',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: ['https://i.ibb.co/Rkmhwm2y/Whats-App-Image-2026-05-27-at-12-29-05-AM.jpg'],
+    inStock: true, featured: false, isPromo: false, ratings: []
+  },
+  {
+    id: '19', name: 'Jersey México Negro',
+    description: `Jersey negro de México para mascota.`,
+    price: 249, category: 'Mexico',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: [
+      'https://i.ibb.co/1J838pDW/Whats-App-Image-2026-06-02-at-6-50-05-PM.jpg',
+      'https://i.ibb.co/B5Dx5Lxt/Whats-App-Image-2026-06-09-at-3-38-00-PM.jpg'],
+    inStock: true, featured: true, isPromo: false, ratings: []
+  },
+  {
+    id: '20', name: 'Mameluco Disney Pizza Planet Alien',
+    description: `Mameluco inspirado en el Alien de Toy Story.`,
+    price: 199, category: 'ropa',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: ['https://i.ibb.co/kgNN3YPw/Whats-App-Image-2026-05-27-at-12-29-05-AM-1.jpg'],
+    inStock: true, featured: false, isPromo: false, ratings: []
+  },
+  {
+    id: '21', name: 'Vestido Perrioni',
+    description: `Vestido rojo elegante para mascota.`,
+    price: 198, category: 'ropa',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: [
+    'https://i.ibb.co/cX2QbBcr/Whats-App-Image-2026-06-10-at-12-25-31-AM.jpg',
+    'https://i.ibb.co/jk7LyGWp/Whats-App-Image-2026-06-10-at-12-25-34-AM.jpg',
+    'https://i.ibb.co/wNRJsgX5/Whats-App-Image-2026-06-10-at-12-25-32-AM.jpg'
+    ],
+    inStock: true, featured: false, isPromo: false, ratings: []
+  },
+  {
+    id: '22', name: 'Jersey Cruz Azul 60 Aniversario',
+    description: `Jersey Cruz Azul 60 aniversario para mascota.`,
+    price: 309, category: 'futbol',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: [
+      'https://i.ibb.co/KpMzXccn/Whats-App-Image-2026-06-10-at-12-25-28-AM.jpg'
+    ],
+    inStock: true, featured: true, isPromo: false, ratings: []
+  },
+  {
+    id: '23', name: 'Dispensador Inteligente para Mascotas',
+    description: `Dispensador inteligente con cámara para alimentar y monitorear a tu mascota.`,
+    price: 1199, category: 'hogar',
+    sizes: ['Única'],
+    stock: [{ size: 'Única', qty: 1 }],
+    images: ['https://i.ibb.co/ppXCd9L/Whats-App-Image-2026-06-10-at-12-25-30-AM.jpg'],
+    inStock: true, featured: true, isPromo: false, ratings: []
+  },
+  {
+    id: '24', name: 'Jersey Pumas 2026',
+    description: `Jersey Pumas 2026 para mascota.`,
+    price: 249, category: 'futbol',
+    sizes: ['0', '1', '2', '3', '4', '5', '6'],
+    stock: [{ size: '0', qty: 1 }, { size: '1', qty: 1 }, { size: '2', qty: 1 }, { size: '3', qty: 1 }, { size: '4', qty: 1 }, { size: '5', qty: 1 }, { size: '6', qty: 1 }],
+    images: ['https://i.ibb.co/p6wz2b45/Whats-App-Image-2026-06-10-at-12-25-29-AM.jpg'],
+    inStock: true, featured: true, isPromo: false, ratings: []
+  }
 ];
 
 function readProductsExtra(): Product[] {
@@ -242,7 +335,7 @@ export function getProducts(): Product[] {
   );
 
   // aquí gana el deploy/código
-  return [...defaultProducts, ...localOnly];
+  return [...defaultProducts, ...localOnly].sort((a, b) => Number(a.id) - Number(b.id));
 }
 
 export function saveProducts(p: Product[]) {
@@ -253,7 +346,7 @@ export function saveProducts(p: Product[]) {
   saveProductsExtra(localOnly);
 }
 
-export function addProduct(p: Omit<Product,'id'>): Product {
+export function addProduct(p: Omit<Product, 'id'>): Product {
   const extraProducts = readProductsExtra();
   const np = { ...p, id: crypto.randomUUID() };
   extraProducts.push(np);
