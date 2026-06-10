@@ -20,7 +20,6 @@ const banners: PromoBannerCard[] = [
     ctaText: '',
     ctaLink: '#catalogo',
     imageUrl: 'https://i.ibb.co/sYF612h/Whats-App-Image-2026-06-10-at-12-55-51-AM.jpg',
-    gradientFrom: 'from-black/0',
   },
 
 
