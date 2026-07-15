@@ -3,13 +3,12 @@ import { ProductCategoryItem } from './types';
 const STORAGE_KEY = 'mascota-directa-categories1';
 
 const defaultCategories: ProductCategoryItem[] = [
-  { id: 'Mexico', label: 'Vive el mundial con el TRI', emoji: '⚽🇲🇽' },
-  { id: 'perro', label: 'Perro', emoji: '🐕' },
-  { id: 'gato', label: 'Gato', emoji: '🐈' },
-  { id: 'ropa', label: 'Ropa', emoji: '👕' },
-  { id: 'deportes', label: 'Deportes', emoji: '🏀' },
-  { id: 'hogar', label: 'Hogar', emoji: '🏡' },
-
+  { id: 'futbol', label: 'Fútbol', emoji: '⚽' },
+  { id: 'hogar', label: 'Hogar', emoji: '🐾' },
+  { id: 'mamelucos', label: 'Mamelucos', emoji: '⭐' },
+  { id: 'gabardina', label: 'Gabardina', emoji: '⛅' },
+  { id: 'hoodies', label: 'Hoodies', emoji: '🥶' },
+  { id: 'elegante', label: 'Elegante', emoji: '🎀' },
 ];
 
 export function getCategories(): ProductCategoryItem[] {

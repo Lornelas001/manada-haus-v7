@@ -14,3 +14,14 @@ export const sampleCollar    = makePlaceholder('#fef3c7', '📿');
 export const sampleSweater   = makePlaceholder('#f0fdf4', '🧶');
 export const sampleHarness   = makePlaceholder('#fce7f3', '🦺');
 export const sampleBowtie    = makePlaceholder('#ede9fe', '🎀');
+
+// Placeholders temporales para productos nuevos del catálogo de WhatsApp
+// (aún no tienen foto real subida — reemplazar en cuanto se tenga la imagen)
+export const sampleJerseyVerde    = makePlaceholder('#dcfce7', '⚽');
+export const sampleGabardinaCafe  = makePlaceholder('#e7d7c9', '🧥');
+export const sampleGabardinaRosa  = makePlaceholder('#fbcfe8', '🧥');
+export const sampleGabardinaAzul  = makePlaceholder('#bfdbfe', '🧥');
+export const sampleHoodieLila     = makePlaceholder('#e9d5ff', '🥶');
+export const sampleHoodieAzul2    = makePlaceholder('#bae6fd', '🥶');
+export const sampleHoodieNegra    = makePlaceholder('#d1d5db', '🥶');
+export const samplePlayeraPolo    = makePlaceholder('#fef9c3', '🎀');
