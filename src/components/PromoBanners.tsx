@@ -10,6 +10,7 @@ interface PromoBannerCard {
   ctaLink: string;
   imageUrl: string;
   gradientFrom?: string;
+  imageFit?: 'cover' | 'contain'; // 'cover' recorta para llenar el espacio (default). 'contain' muestra la foto completa sin recortar ("zoom out").
 }
 
 const banners: PromoBannerCard[] = [
@@ -32,6 +33,16 @@ const banners: PromoBannerCard[] = [
     ctaLink: '#catalogo',
     imageUrl: 'https://i.ibb.co/Q78bzKYf/download-5.png',
     gradientFrom: 'from-black/70',
+  },
+
+      {
+    id: 'estilo-manada',
+    title: '',
+    subtitle: '',
+    ctaText: '',
+    ctaLink: '#catalogo',
+    imageUrl: 'https://i.ibb.co/My9BgXkx/Whats-App-Image-2026-08-08-at-8-08-50-PM.jpg',
+    imageFit: 'contain',
   },
 
 
@@ -58,12 +69,25 @@ export function PromoBanners() {
 
         {/* Imagen de fondo */}
         {banner.imageUrl ? (
-          <img
-            key={banner.id}
-            src={banner.imageUrl}
-            alt={banner.title}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-          />
+          <>
+            {banner.imageFit === 'contain' && (
+              // Fondo difuminado para rellenar los espacios cuando la foto no cubre todo el banner
+              <img
+                src={banner.imageUrl}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-60"
+              />
+            )}
+            <img
+              key={banner.id}
+              src={banner.imageUrl}
+              alt={banner.title}
+              className={`absolute inset-0 w-full h-full transition-opacity duration-700 ${
+                banner.imageFit === 'contain' ? 'object-contain' : 'object-cover'
+              }`}
+            />
+          </>
         ) : (
           // Placeholder de color cuando no hay imagen
           <div

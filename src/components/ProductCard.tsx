@@ -42,8 +42,9 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-            Sin imagen
+          <div className="flex h-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-muted to-muted/60 text-muted-foreground">
+            <span className="text-3xl">🐾</span>
+            <span className="text-xs font-medium">Foto próximamente</span>
           </div>
         )}
 

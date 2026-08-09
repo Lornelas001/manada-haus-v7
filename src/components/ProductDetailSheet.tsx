@@ -95,17 +95,23 @@ export function ProductDetailSheet({
     });
   };
 
-  const handleRating = () => {
+  const handleRating = async () => {
     if (ratingStars === 0) return;
 
-    addRating(product.id, ratingStars, ratingComment);
+    const stars = ratingStars;
+    const comment = ratingComment;
+
     setRatingStars(0);
     setRatingComment('');
     setRatingDone(true);
-
     setTimeout(() => setRatingDone(false), 3000);
 
-    onProductUpdated?.(product.id);
+    try {
+      await addRating(product.id, stars, comment);
+      onProductUpdated?.(product.id);
+    } catch (err) {
+      console.error('Error guardando la reseña:', err);
+    }
   };
 
   return (

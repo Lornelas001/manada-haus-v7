@@ -1,9 +1,9 @@
-import { getSales, getProducts } from '@/lib/products-store';
+import { getSales } from '@/lib/products-store';
+import { Product } from '@/lib/types';
 import { X, TrendingUp, AlertTriangle } from 'lucide-react';
 
-export function StatsPanel({ onClose }: { onClose: () => void }) {
+export function StatsPanel({ products, onClose }: { products: Product[]; onClose: () => void }) {
   const sales = getSales();
-  const products = getProducts();
 
   const totalRevenue = sales.reduce((s, r) => s + r.price, 0);
 

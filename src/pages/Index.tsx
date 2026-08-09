@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { ProductCard } from '@/components/ProductCard';
 import { PromoBanners } from '@/components/PromoBanners';
 import { ProductDetailSheet } from '@/components/ProductDetailSheet';
@@ -16,6 +16,9 @@ import { Product, ProductCategoryItem } from '@/lib/types';
 import { MessageCircle, Instagram, Facebook, TrendingUp } from 'lucide-react';
 import { EditProductDialog } from '@/components/EditProductDialog';
 import { StatsPanel } from '@/components/StatsPanel';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { SizeGuide } from '@/components/SizeGuide';
+import { FAQSection } from '@/components/FAQSection';
 
 // TikTok icon
 function TikTokIcon({ className }: { className?: string }) {
@@ -27,9 +30,12 @@ function TikTokIcon({ className }: { className?: string }) {
 }
 
 export default function Index() {
-  const [products, setProducts] = useState<Product[]>(getProducts);
-  const [categories, setCategories] = useState<ProductCategoryItem[]>(getCategories);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<ProductCategoryItem[]>([]);
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<string>('todos');
+  const [search, setSearch] = useState('');
+  const [sortBy, setSortBy] = useState<'relevancia' | 'precio-asc' | 'precio-desc'>('relevancia');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [detailOpen, setDetailOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -37,45 +43,112 @@ export default function Index() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showStats, setShowStats] = useState(false);
 
-  const reload = useCallback(() => setProducts(getProducts()), []);
+  useEffect(() => {
+    let cancelled = false;
 
-  const filtered = useMemo(
-    () => (filter === 'todos' ? products : products.filter((p) => p.category === filter)),
-    [products, filter]
-  );
+    (async () => {
+      const [prods, cats] = await Promise.all([getProducts(), getCategories()]);
+      if (cancelled) return;
+      setProducts(prods);
+      setCategories(cats);
+      setLoading(false);
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const reload = useCallback(async () => {
+    const fresh = await getProducts();
+    setProducts(fresh);
+    return fresh;
+  }, []);
+
+  const normalize = (s: string) =>
+    s
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  const filtered = useMemo(() => {
+    let list = filter === 'todos' ? products : products.filter((p) => p.category === filter);
+
+    const q = normalize(search.trim());
+    if (q) {
+      list = list.filter(
+        (p) => normalize(p.name).includes(q) || normalize(p.description || '').includes(q)
+      );
+    }
+
+    if (sortBy === 'precio-asc') {
+      list = [...list].sort((a, b) => a.price - b.price);
+    } else if (sortBy === 'precio-desc') {
+      list = [...list].sort((a, b) => b.price - a.price);
+    }
+
+    return list;
+  }, [products, filter, search, sortBy]);
 
   const featured = useMemo(() => products.filter((p) => p.featured).slice(0, 3), [products]);
 
-  const handleAdd = (data: Omit<Product, 'id'>) => {
-    const newP = addProduct(data);
-    setProducts((prev) => [...prev, newP]);
+  const handleAdd = async (data: Omit<Product, 'id'>) => {
+    try {
+      const newP = await addProduct(data);
+      setProducts((prev) => [...prev, newP]);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo agregar el producto. Intenta de nuevo.');
+    }
   };
 
-  const handleUpdate = (id: string, updates: Partial<Product>) => {
-    updateProduct(id, updates);
+  const handleUpdate = async (id: string, updates: Partial<Product>) => {
     setProducts((prev) => prev.map((p) => (p.id === id ? { ...p, ...updates } : p)));
+    try {
+      await updateProduct(id, updates);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo guardar el cambio en Supabase. Recargando catálogo...');
+      reload();
+    }
   };
 
-  const handleProductUpdated = (id: string) => {
-    reload();
-    const fresh = getProducts().find((p) => p.id === id);
-    if (fresh) setSelectedProduct(fresh);
+  const handleProductUpdated = async (id: string) => {
+    const fresh = await reload();
+    const p = fresh.find((x) => x.id === id);
+    if (p) setSelectedProduct(p);
   };
 
-  const handleDelete = (id: string) => {
-    deleteProduct(id);
+  const handleDelete = async (id: string) => {
     setProducts((prev) => prev.filter((p) => p.id !== id));
+    try {
+      await deleteProduct(id);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo borrar el producto en Supabase. Recargando catálogo...');
+      reload();
+    }
   };
 
-  const handleAddCategory = (label: string, emoji?: string) => {
-    const newCat = addCategory(label, emoji);
-    setCategories((prev) => [...prev, newCat]);
+  const handleAddCategory = async (label: string, emoji?: string) => {
+    try {
+      const newCat = await addCategory(label, emoji);
+      setCategories((prev) => [...prev, newCat]);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo crear la categoría. Intenta de nuevo.');
+    }
   };
 
-  const handleDeleteCategory = (id: string) => {
-    deleteCategory(id);
+  const handleDeleteCategory = async (id: string) => {
     setCategories((prev) => prev.filter((c) => c.id !== id));
     if (filter === id) setFilter('todos');
+    try {
+      await deleteCategory(id);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo borrar la categoría en Supabase.');
+    }
   };
 
   const openDetail = (product: Product) => {
@@ -154,6 +227,22 @@ export default function Index() {
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-4 pb-6 sm:pt-6 sm:pb-8">
           <div className="absolute top-4 right-4 flex items-center gap-2 z-10">
+            {isAdmin && (
+              <button
+                onClick={async () => {
+                  setLoading(true);
+                  const [prods, cats] = await Promise.all([getProducts(), getCategories()]);
+                  setProducts(prods);
+                  setCategories(cats);
+                  setLoading(false);
+                }}
+                className="inline-flex items-center gap-1.5 h-9 px-3 rounded-xl text-xs font-medium text-muted-foreground bg-white border border-border hover:bg-accent transition-colors"
+                title="Vuelve a traer el catálogo desde Supabase (útil si editaste desde otro dispositivo)"
+              >
+                Recargar catálogo
+              </button>
+            )}
+
             {isAdmin && (
               <button
                 onClick={() => setShowStats(true)}
@@ -255,6 +344,38 @@ export default function Index() {
           Catálogo
         </h2>
 
+        <div className="mb-4 flex flex-col sm:flex-row gap-2.5">
+          <div className="relative flex-1 sm:max-w-xs">
+            <svg
+              className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Buscar producto..."
+              className="h-10 w-full rounded-full border border-border bg-white pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-black/10"
+            />
+          </div>
+
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+            className="h-10 rounded-full border border-border bg-white px-4 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-black/10 sm:w-auto"
+          >
+            <option value="relevancia">Más relevantes</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+          </select>
+        </div>
+
         <div className="flex flex-wrap items-center gap-2.5">
           <button
             onClick={() => setFilter('todos')}
@@ -293,7 +414,11 @@ export default function Index() {
       </section>
 
       <main className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-12">
-        {filtered.length === 0 ? (
+        {loading ? (
+          <div className="py-16 text-center">
+            <p className="text-base text-muted-foreground">Cargando catálogo...</p>
+          </div>
+        ) : filtered.length === 0 ? (
           <div className="py-16 text-center">
             <p className="text-base text-muted-foreground">
               No hay productos en esta categoría.
@@ -329,7 +454,11 @@ export default function Index() {
         )}
       </main>
 
+      <SizeGuide />
+
       {/* <ServicesSection isAdmin={isAdmin} /> */}
+
+      <FAQSection />
 
       <footer className="bg-black text-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
@@ -397,7 +526,7 @@ export default function Index() {
         onAddToCart={handleAddToCart}
       />
 
-      {showStats && <StatsPanel onClose={() => setShowStats(false)} />}
+      {showStats && <StatsPanel products={products} onClose={() => setShowStats(false)} />}
 
       <MiniCart
         items={cartItems}
@@ -408,6 +537,8 @@ export default function Index() {
         onRemove={removeCartItem}
         whatsappNumber="525652074499"
       />
+
+      <FloatingWhatsApp phoneNumber="525652074499" />
     </div>
   );
 }

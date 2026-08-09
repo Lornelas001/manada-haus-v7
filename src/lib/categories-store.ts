@@ -1,42 +1,50 @@
 import { ProductCategoryItem } from './types';
+import { supabase } from './supabase';
 
-const STORAGE_KEY = 'mascota-directa-categories1';
-
-const defaultCategories: ProductCategoryItem[] = [
-  { id: 'futbol', label: 'Fútbol', emoji: '⚽' },
-  { id: 'hogar', label: 'Hogar', emoji: '🐾' },
-  { id: 'mamelucos', label: 'Mamelucos', emoji: '⭐' },
-  { id: 'gabardina', label: 'Gabardina', emoji: '⛅' },
-  { id: 'hoodies', label: 'Hoodies', emoji: '🥶' },
-  { id: 'elegante', label: 'Elegante', emoji: '🎀' },
-];
-
-export function getCategories(): ProductCategoryItem[] {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) return JSON.parse(stored);
-  } catch {}
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultCategories));
-  return defaultCategories;
+function slugify(label: string): string {
+  return (
+    label
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '') || 'categoria'
+  );
 }
 
-export function saveCategories(categories: ProductCategoryItem[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(categories));
+export async function getCategories(): Promise<ProductCategoryItem[]> {
+  const { data, error } = await supabase
+    .from('categories')
+    .select('*')
+    .order('sort_order', { ascending: true });
+
+  if (error) {
+    console.error('Error cargando categorías de Supabase:', error);
+    return [];
+  }
+
+  return (data || []).map((c) => ({
+    id: c.id,
+    label: c.label,
+    emoji: c.emoji || undefined,
+  }));
 }
 
-export function addCategory(label: string, emoji?: string): ProductCategoryItem {
-  const categories = getCategories();
-  const newCat: ProductCategoryItem = {
-    id: label.toLowerCase().replace(/\s+/g, '-') + '-' + Date.now(),
-    label,
-    emoji,
-  };
-  categories.push(newCat);
-  saveCategories(categories);
-  return newCat;
+export async function addCategory(label: string, emoji?: string): Promise<ProductCategoryItem> {
+  const id = `${slugify(label)}-${Date.now()}`;
+
+  const { data, error } = await supabase
+    .from('categories')
+    .insert({ id, label, emoji })
+    .select()
+    .single();
+
+  if (error || !data) throw error || new Error('No se pudo crear la categoría');
+
+  return { id: data.id, label: data.label, emoji: data.emoji || undefined };
 }
 
-export function deleteCategory(id: string) {
-  const categories = getCategories().filter((c) => c.id !== id);
-  saveCategories(categories);
+export async function deleteCategory(id: string): Promise<void> {
+  const { error } = await supabase.from('categories').delete().eq('id', id);
+  if (error) throw error;
 }
