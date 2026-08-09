@@ -15,24 +15,24 @@ interface PromoBannerCard {
 
 const banners: PromoBannerCard[] = [
       {
-    id: 'gana-mundial',
+    id: 'vida-manada',
     title: '',
     subtitle: '',
     ctaText: '',
     ctaLink: '#catalogo',
-    imageUrl: 'https://i.ibb.co/sYF612h/Whats-App-Image-2026-06-10-at-12-55-51-AM.jpg',
+    imageUrl: 'https://i.ibb.co/My9BgXkx/Whats-App-Image-2026-08-08-at-8-08-50-PM.jpg',
   },
 
 
 
       {
     id: 'envios-50',
-    title: 'Envíos en $50',
-    subtitle: 'Hasta el 15 de junio',
-    ctaText: 'Comprar ahora',
+    title: '',
+    subtitle: '',
+    ctaText: '',
     ctaLink: '#catalogo',
-    imageUrl: 'https://i.ibb.co/Q78bzKYf/download-5.png',
-    gradientFrom: 'from-black/70',
+    imageUrl: 'https://i.ibb.co/JJM3hmh/Whats-App-Image-2026-08-08-at-8-00-56-PM.jpg',
+    gradientFrom: '',
   },
 
       {
