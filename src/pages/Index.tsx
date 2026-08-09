@@ -19,6 +19,8 @@ import { StatsPanel } from '@/components/StatsPanel';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { SizeGuide } from '@/components/SizeGuide';
 import { FAQSection } from '@/components/FAQSection';
+import { ManageBannersDialog } from '@/components/ManageBannersDialog';
+import { Banner, getAllBanners, addBanner, updateBanner, deleteBanner } from '@/lib/banners-store';
 
 // TikTok icon
 function TikTokIcon({ className }: { className?: string }) {
@@ -42,6 +44,20 @@ export default function Index() {
   const [cartOpen, setCartOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [allBanners, setAllBanners] = useState<Banner[]>([]);
+  const [bannersKey, setBannersKey] = useState(0);
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    let cancelled = false;
+    (async () => {
+      const fresh = await getAllBanners();
+      if (!cancelled) setAllBanners(fresh);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin]);
 
   useEffect(() => {
     let cancelled = false;
@@ -151,6 +167,39 @@ export default function Index() {
     }
   };
 
+  const handleAddBanner = async (b: Omit<Banner, 'id'>) => {
+    try {
+      await addBanner(b);
+      setAllBanners(await getAllBanners());
+      setBannersKey((k) => k + 1);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo agregar el banner. Revisa la URL de la imagen e intenta de nuevo.');
+    }
+  };
+
+  const handleUpdateBanner = async (id: string, updates: Partial<Banner>) => {
+    try {
+      await updateBanner(id, updates);
+      setAllBanners(await getAllBanners());
+      setBannersKey((k) => k + 1);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo guardar el banner. Intenta de nuevo.');
+    }
+  };
+
+  const handleDeleteBanner = async (id: string) => {
+    try {
+      await deleteBanner(id);
+      setAllBanners(await getAllBanners());
+      setBannersKey((k) => k + 1);
+    } catch (err) {
+      console.error(err);
+      window.alert('No se pudo borrar el banner. Intenta de nuevo.');
+    }
+  };
+
   const openDetail = (product: Product) => {
     setSelectedProduct(product);
     setDetailOpen(true);
@@ -244,6 +293,15 @@ export default function Index() {
             )}
 
             {isAdmin && (
+              <ManageBannersDialog
+                banners={allBanners}
+                onAdd={handleAddBanner}
+                onUpdate={handleUpdateBanner}
+                onDelete={handleDeleteBanner}
+              />
+            )}
+
+            {isAdmin && (
               <button
                 onClick={() => setShowStats(true)}
                 className="inline-flex items-center gap-1.5 h-9 px-3 rounded-xl text-xs font-medium text-muted-foreground bg-white border border-border hover:bg-accent transition-colors"
@@ -295,7 +353,7 @@ export default function Index() {
       </header>
 
       <PromotionsSection isAdmin={isAdmin} />
-      <PromoBanners />
+      <PromoBanners key={bannersKey} />
       {featured.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-5 flex items-center justify-between">
